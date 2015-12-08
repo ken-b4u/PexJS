@@ -89,10 +89,12 @@ Renderer.prototype.setFrame = function(rect) {
 		if(canvas.width != (width | 0)) {
 			option.debug && EngineLogD("set canvas width to " + (width | 0));
 			canvas.width = width | 0;
+			canvas.style.width = width * option.scaleX | 0;
 		}
 		if(canvas.height != (height | 0)) {
 			option.debug && EngineLogD("set canvas height to " + (height | 0));
 			canvas.height = height | 0;
+			canvas.style.height = height * option.scaleY | 0;
 		}
 
 		this.frameWidth = canvas.width;
